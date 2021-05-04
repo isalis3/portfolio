@@ -102,7 +102,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                               child: CircleAvatar(
                                 radius: 50,
                                 backgroundColor: Colors.white,
-                                backgroundImage: AssetImage('images/dp.png'),
+                                backgroundImage: AssetImage('images/dp.jpg'),
                               ),
                             ),
                           ),
