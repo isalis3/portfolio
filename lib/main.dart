@@ -120,7 +120,7 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
                         ),
                       ),
                       Text(
-                        'Ibson',
+                        'Mobile Developer!',
                         style: TextStyle(
                           color: Colors.white70,
                           letterSpacing: 2.5,
