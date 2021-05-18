@@ -81,6 +81,12 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
         animation: _controller,
         builder: (context, child) {
           return Scaffold(
+            
+            appBar: AppBar(
+              title: Text('Ibson portfolio');
+              centerTitle: true,
+            ),
+            
             backgroundColor:
             background.evaluate(AlwaysStoppedAnimation(_controller.value)),
             body: SafeArea(
