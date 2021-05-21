@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+//import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -81,189 +81,201 @@ class _MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
         animation: _controller,
         builder: (context, child) {
           return Scaffold(
-            
             appBar: AppBar(
-              title: Text('Ibson portfolio');
+              title: Text('Ibson portforlio'),
               centerTitle: true,
             ),
-            
             backgroundColor:
-            background.evaluate(AlwaysStoppedAnimation(_controller.value)),
+                background.evaluate(AlwaysStoppedAnimation(_controller.value)),
             body: SafeArea(
               child: Center(
                 child: Padding(
                   padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Stack(
-                        children: <Widget>[
-
-                          Padding(
-                            padding: const EdgeInsets.all(21.0),
-                            child: Card(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(50)),
-                              elevation: 0,
-                              child: CircleAvatar(
-                                radius: 50,
-                                backgroundColor: Colors.white,
-                                backgroundImage: AssetImage('images/dp.jpg'),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Stack(
+                          children: <Widget>[
+                            Padding(
+                              padding: const EdgeInsets.all(21.0),
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(50)),
+                                elevation: 0,
+                                child: CircleAvatar(
+                                  radius: 50,
+                                  backgroundColor: Colors.white,
+                                  backgroundImage: AssetImage('images/dp.jpg'),
+                                ),
                               ),
                             ),
+                          ],
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
+                          child: Text(
+                            'Ibahim Salisu',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontFamily: 'Pacifico',
+                            ),
                           ),
-                        ],
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(8, 0, 8, 8),
-                        child: Text(
-                          'Ibahim Salisu',
+                        ),
+                        Text(
+                          'Mobile developer',
                           style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 30,
-                            fontFamily: 'Pacifico',
+                            color: Colors.white70,
+                            letterSpacing: 2.5,
+                            fontSize: 15,
+                            fontFamily: 'Source Sans Pro',
                           ),
                         ),
-                      ),
-                      Text(
-                        'Mobile Developer!',
-                        style: TextStyle(
-                          color: Colors.white70,
-                          letterSpacing: 2.5,
-                          fontSize: 15,
-                          fontFamily: 'Source Sans Pro',
+                        SizedBox(
+                          height: 30,
+                          width: 175,
+                          child: Divider(
+                            color: Colors.white54,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        height: 30,
-                        width: 175,
-                        child: Divider(
-                          color: Colors.white54,
-                        ),
-                      ),
-                      GestureDetector(
-                        child: Tooltip(
-                          message: 'Phone',
-                          waitDuration: Duration(milliseconds: 500),
-                          child: Card(
-                            color: Colors.white,
-                            elevation: 5,
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  Icon(
-                                    Icons.phone,
-                                    color: Colors.blueGrey[300],
-                                  ),
-                                  Text(
-                                    '+234 8167395212',
-                                    style: TextStyle(color: Colors.blueGrey[300]),
-                                  )
-                                ],
+                        GestureDetector(
+                          child: Tooltip(
+                            message: 'Phone',
+                            waitDuration: Duration(milliseconds: 500),
+                            child: Card(
+                              color: Colors.white,
+                              elevation: 5,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.phone,
+                                      color: Colors.blueGrey[300],
+                                    ),
+                                    Text(
+                                      '+234 8167395212',
+                                      style: TextStyle(
+                                          color: Colors.blueGrey[300]),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        ),),
-                      GestureDetector(
-
-                        child: Tooltip(
-                          message: 'Email',
-                          waitDuration: Duration(milliseconds: 500),
-                          child: Card(
-                            color: Colors.white,
-                            elevation: 5,
-                            child: Padding(
-                              padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  Icon(
-                                    Icons.mail,
-                                    color: Colors.blueGrey[300],
-                                  ),
-                                  Text(
-                                    'ibrahimsalisu011@gmail.com',
-                                    style: TextStyle(color: Colors.blueGrey[300]),
-                                  )
-                                ],
+                        ),
+                        GestureDetector(
+                          child: Tooltip(
+                            message: 'Email',
+                            waitDuration: Duration(milliseconds: 500),
+                            child: Card(
+                              color: Colors.white,
+                              elevation: 5,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    Icon(
+                                      Icons.mail,
+                                      color: Colors.blueGrey[300],
+                                    ),
+                                    Text(
+                                      'ibrahimsalisu011@gmail.com',
+                                      style: TextStyle(
+                                          color: Colors.blueGrey[300]),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        ),),
-                     /* Card(
-                        color: Colors.white,
-                        elevation: 5,
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              GestureDetector(
-
-                                child: Tooltip(
-                                  message: 'LinkedIn',
-                                  waitDuration: Duration(milliseconds: 500),
-                                  child:Icon(
-                                    FontAwesomeIcons.linkedin,
-                                    color: Colors.blueGrey[300],
-                                  ),),
-                              ),
-                              GestureDetector(
-                                onTap: _launchGH,
-                                child: Tooltip(
-                                  message: 'Github',
-                                  waitDuration: Duration(milliseconds: 500),
-                                  child:Icon(
-                                    FontAwesomeIcons.githubSquare,
-                                    color: Colors.blueGrey[300],
-                                  ),),
-                              ),
-                              GestureDetector(
-                                onTap: _launchTW,
-                                child: Tooltip(
-                                  message: 'Twitter',
-                                  waitDuration: Duration(milliseconds: 500),
-                                  child:Icon(
-                                    FontAwesomeIcons.twitterSquare,
-                                    color: Colors.blueGrey[300],
-                                  ),),
-                              ),
-                              GestureDetector(
-                                onTap: _launchIG,
-                                child: Tooltip(
-                                  message: 'Instagram',
-                                  waitDuration: Duration(milliseconds: 500),
-                                  child:Icon(
-                                    FontAwesomeIcons.instagramSquare,
-                                    color: Colors.blueGrey[300],
-                                  ),
+                        ),
+                        GestureDetector(
+                          child: Tooltip(
+                            message: 'Email',
+                            waitDuration: Duration(milliseconds: 500),
+                            child: Card(
+                              color: Colors.white,
+                              elevation: 5,
+                              child: Padding(
+                                padding:
+                                    const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                                child: Row(
+                                  children: [
+                                    Flexible(
+                                      child: Container(
+                                        child: Icon(
+                                          Icons.mail,
+                                          color: Colors.blueGrey[300],
+                                        ),
+                                        color: Colors.yellow,
+                                        height: 60,
+                                        width: 90,
+                                      ),
+                                    ),
+                                    Flexible(
+                                      child: Container(
+                                        child: Icon(
+                                          Icons.phone,
+                                          color: Colors.blueGrey[300],
+                                        ),
+                                        color: Colors.black,
+                                        height: 60,
+                                        width: 90,
+                                      ),
+                                    ),
+                                    Flexible(
+                                      child: Container(
+                                        child: Icon(
+                                          Icons.message,
+                                          color: Colors.blueGrey[300],
+                                        ),
+                                        color: Colors.green,
+                                        height: 60,
+                                        width: 90,
+                                      ),
+                                    ),
+                                    Flexible(
+                                      child: Container(
+                                        child: Container(
+                                          child: Icon(
+                                            Icons.share,
+                                            color: Colors.blueGrey[300],
+                                          ),
+                                          color: Colors.purple,
+                                          height: 60,
+                                          width: 90,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                              GestureDetector(
-                                onTap: _launchRD,
-                                child: Tooltip(
-                                  message: 'Reddit',
-                                  waitDuration: Duration(milliseconds: 500),
-                                  child: Icon(
-                                    FontAwesomeIcons.redditSquare,
-                                    color: Colors.blueGrey[300],
-                                  ),
-                                ),
-                              ),
-                            ],
+                            ),
                           ),
                         ),
-                      ),*/
-                    ],
+
+                         
+                      ],
+                    ),
                   ),
                 ),
               ),
             ),
           );
+
+           
         },
       ),
     );
   }
 }
+
+class FontAwesomeIcons {}
